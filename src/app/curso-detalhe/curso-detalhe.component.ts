@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/Router';
+import { ActivatedRoute, Router } from '@angular/Router';
 import { Subscription } from 'rxjs/Subscription';
 import { CursosService } from '../cursos/cursos.service';
 
@@ -14,7 +14,10 @@ export class CursoDetalheComponent implements OnInit, OnDestroy {
   inscricao: Subscription;
   curso: any;
 
-  constructor(private route: ActivatedRoute, private cursosServices: CursosService) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private cursosServices: CursosService) {
     // this.id = this.route.snapshot.params['id'];
   }
 
@@ -23,6 +26,10 @@ export class CursoDetalheComponent implements OnInit, OnDestroy {
       (params: any) => {
         this.id = params['id'];
         this.curso = this.cursosServices.getCurso(this.id);
+
+        if (this.curso == null) {
+          this.router.navigate(['']);
+        }
       }
     );
   }
