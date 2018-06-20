@@ -9,6 +9,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { routing } from './app.routing';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursosService } from './cursos/cursos.service';
+import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 // import { MaterializeModule } from 'angular2-materialize';
 
 
@@ -18,7 +19,8 @@ import { CursosService } from './cursos/cursos.service';
     HomeComponent,
     LoginComponent,
     CursosComponent,
-    CursoDetalheComponent
+    CursoDetalheComponent,
+    CursoNaoEncontradoComponent
   ],
   imports: [
     BrowserModule,
