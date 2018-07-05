@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routing.module';
 import { CursosModule } from './cursos/cursos.module';
+import { AlunosModule } from './alunos/alunos.module';
 // import { MaterializeModule } from 'angular2-materialize';
 
 
@@ -18,6 +19,7 @@ import { CursosModule } from './cursos/cursos.module';
   ],
   imports: [
     BrowserModule,
+    AlunosModule,
     CursosModule,
     AppRoutingModule
     // MaterializeModule
