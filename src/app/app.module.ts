@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 
@@ -8,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routing.module';
 import { CursosModule } from './cursos/cursos.module';
 import { AlunosModule } from './alunos/alunos.module';
+import { AuthService } from './login/auth.service';
 // import { MaterializeModule } from 'angular2-materialize';
 
 
@@ -19,12 +21,13 @@ import { AlunosModule } from './alunos/alunos.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AlunosModule,
     CursosModule,
     AppRoutingModule
     // MaterializeModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
