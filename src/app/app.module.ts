@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth-guard';
 import { CursosGuard } from './guards/cursos-guard';
+import { AlunosGuard } from './guards/alunos.guard';
 // import { MaterializeModule } from 'angular2-materialize';
 
 
@@ -32,6 +33,7 @@ import { CursosGuard } from './guards/cursos-guard';
   providers: [
     AuthService,
     AuthGuard,
+    AlunosGuard,
     CursosGuard
   ],
   bootstrap: [AppComponent]
