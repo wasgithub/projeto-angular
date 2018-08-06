@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app.routing.module';
 // import { AlunosModule } from './alunos/alunos.module';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth-guard';
+import { CursosGuard } from './guards/cursos-guard';
 // import { MaterializeModule } from 'angular2-materialize';
 
 
@@ -28,7 +29,11 @@ import { AuthGuard } from './guards/auth-guard';
     AppRoutingModule
     // MaterializeModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [
+    AuthService,
+    AuthGuard,
+    CursosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
